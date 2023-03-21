@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.sayatech.slambook.KnowMe"
+    android:orientation="vertical"
+    android:padding="16sp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Theme.SlamBook.SlamInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textName"
+            style="@style/Theme.SlamBook.SlamInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="12sp"
+            android:hint="My Good Name "
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Theme.SlamBook.SlamInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textFondly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Theme.SlamBook.SlamInputEditText"
+            android:drawablePadding="12sp"
+            android:hint="Fondly known as"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Theme.SlamBook.SlamInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textBorn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Theme.SlamBook.SlamInputEditText"
+            android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+            android:drawablePadding="12sp"
+            android:hint="Born On"
+            android:focusable="false"
+            android:inputType="date" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Theme.SlamBook.SlamInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textZodiac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Theme.SlamBook.SlamInputEditText"
+            android:drawablePadding="12sp"
+            android:hint="Zodiac Sign"
+            android:inputType="textShortMessage" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Theme.SlamBook.SlamInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEmailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Theme.SlamBook.SlamInputEditText"
+            android:drawableStart="@drawable/ic_baseline_mail_24"
+            android:drawablePadding="12sp"
+            android:hint="Reach me online@"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Theme.SlamBook.SlamInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Theme.SlamBook.SlamInputEditText"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:drawablePadding="12sp"
+            android:hint="Dial me at"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:hint="Relationship Status?"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="5dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/textRelationship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:fontFamily="@font/amita"
+            android:textSize="20sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Theme.SlamBook.SlamInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Theme.SlamBook.SlamInputEditText"
+            android:hint="Words about me" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
+</ScrollView>

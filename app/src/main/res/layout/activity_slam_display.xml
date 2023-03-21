@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sayatech.slambook.SlamDisplay"
+    android:layout_margin="5sp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="View Slams" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:drawableStart="@drawable/ic_baseline_person_24"
+                    android:drawablePadding="12sp"
+                    android:hint="My Good Name "
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:drawablePadding="12sp"
+                    android:hint="Fondly known as"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+                    android:drawablePadding="12sp"
+                    android:hint="Born On"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="date" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:drawablePadding="12sp"
+                    android:hint="Zodiac Sign"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="textShortMessage" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:drawableStart="@drawable/ic_baseline_mail_24"
+                    android:drawablePadding="12sp"
+                    android:hint="Reach me online@"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:drawableStart="@drawable/ic_baseline_phone_24"
+                    android:drawablePadding="12sp"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Dial me at"
+                    android:inputType="phone" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:drawablePadding="12sp"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Relationship Status?"
+                    android:inputType="textShortMessage" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Words about me" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:hint="Color !!"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+    android:cursorVisible="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Food !!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Place  !!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Sport !!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Movie stars I throw myself at!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Cartoon character!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Band/Singer I love!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Never seen a movie like!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="My RoleModel" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:inputType="textShortMessage"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Quote to live by!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="My Hobbies!"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="I go crazy about!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Fascinated By?" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Ambition!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="If Genie would give me a wish!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="First rule I'd make as president" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5sp"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="I'm bad at -_-" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Describe Love!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Describe Friendship!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Theme.SlamBook.SlamInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SlamBook.SlamInputEditText"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:hint="Tell us more about you!" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

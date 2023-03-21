@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.SlamBook.SlamInputEditText" parent="ThemeOverlay.Material3.TextInputEditText">
+        <item name="fontFamily">@font/amita</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_new</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/md_theme_light_onSurface</item>
+        <item name="android:importantForAutofill">no</item>
+        <item name="android:lineSpacingExtra">-10dp</item>
+
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "676015906591",
+    "project_id": "slams-100922",
+    "storage_bucket": "slams-100922.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676015906591:android:0bc8401045340ea727da2a",
+        "android_client_info": {
+          "package_name": "com.sayatech.slambook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676015906591-553uhvh9bgh6l0dad27dnkd5pejq5kfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsdPr3pTnbkbhxMH_-wMsWc-fPB8wwR88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676015906591-553uhvh9bgh6l0dad27dnkd5pejq5kfd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
