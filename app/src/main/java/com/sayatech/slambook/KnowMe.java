@@ -18,6 +18,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.Objects;
 
 public class KnowMe extends Fragment implements DatePickerDialog.OnDateSetListener {
 
@@ -43,17 +44,14 @@ public class KnowMe extends Fragment implements DatePickerDialog.OnDateSetListen
         phoneNumber = view.findViewById(R.id.textPhoneNumber);
         relationshipStatus = view.findViewById(R.id.textRelationship);
         words = view.findViewById(R.id.textWords);
-        stringArrayAdapter = new ArrayAdapter<String>(getContext(), R.layout.list_relationship , items);
+        stringArrayAdapter = new ArrayAdapter<String>(getContext(), R.layout.list_relationship, items);
 
         relationshipStatus.setAdapter(stringArrayAdapter);
 
-        bornOn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DatePickerClass datePicker = new DatePickerClass();
-                datePicker.setListeningActivity(KnowMe.this);
-                datePicker.show(getActivity().getSupportFragmentManager(), "date");
-            }
+        bornOn.setOnClickListener(v -> {
+            DatePickerClass datePicker = new DatePickerClass();
+            datePicker.setListeningActivity(KnowMe.this);
+            datePicker.show(requireActivity().getSupportFragmentManager(), "date");
         });
         return view;
     }
@@ -88,14 +86,14 @@ public class KnowMe extends Fragment implements DatePickerDialog.OnDateSetListen
     }
 
     public boolean passingData() {
-        String GoodName = goodName.getText().toString().trim();
-        String FondlyKnown = knownAs.getText().toString().trim();
-        String BornOn = bornOn.getText().toString().trim();
-        String ZodiacSign = zodiacSign.getText().toString().trim();
-        String EMailID = mailID.getText().toString().trim();
-        String PhoneNumber = phoneNumber.getText().toString().trim();
+        String GoodName = Objects.requireNonNull(goodName.getText()).toString().trim();
+        String FondlyKnown = Objects.requireNonNull(knownAs.getText()).toString().trim();
+        String BornOn = Objects.requireNonNull(bornOn.getText()).toString().trim();
+        String ZodiacSign = Objects.requireNonNull(zodiacSign.getText()).toString().trim();
+        String EMailID = Objects.requireNonNull(mailID.getText()).toString().trim();
+        String PhoneNumber = Objects.requireNonNull(phoneNumber.getText()).toString().trim();
         String RelationshipStatus = relationshipStatus.getText().toString().trim();
-        String Words = words.getText().toString().trim();
+        String Words = Objects.requireNonNull(words.getText()).toString().trim();
 
         if (GoodName.isEmpty() | FondlyKnown.isEmpty() | BornOn.isEmpty() |
                 ZodiacSign.isEmpty() | EMailID.isEmpty() | PhoneNumber.isEmpty() |

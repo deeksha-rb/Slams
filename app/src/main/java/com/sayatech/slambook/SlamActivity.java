@@ -105,7 +105,6 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
         welcomeAnim = findViewById(R.id.welcome_anim);
         welcomeText = findViewById(R.id.welcome_text);
 
-
         getDynamicLinksFromFirebase();
 
         Dialog slamChoiceDialog = new Dialog(this);
@@ -138,12 +137,16 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
                             .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
                                 public void onSuccess(DocumentReference documentReference) {
-                                    Task<ShortDynamicLink> dynamicLink = FirebaseDynamicLinks.getInstance()
+                                    Task<ShortDynamicLink> dynamicLink = FirebaseDynamicLinks
+                                            .getInstance()
                                             .createDynamicLink()
-                                            .setLink(Uri.parse("https://www.slams.com/?id=" + documentReference.getId()))
+                                            .setLink(Uri.parse("https://www.slams.com/?id="
+                                                    + documentReference.getId()))
                                             .setDomainUriPrefix("https://slams.page.link")
                                             .setAndroidParameters(
-                                                    new DynamicLink.AndroidParameters.Builder("com.sayatech.slambook")
+                                                    new DynamicLink
+                                                            .AndroidParameters
+                                                            .Builder("com.sayatech.slambook")
                                                             .build()
                                             ).buildShortDynamicLink(ShortDynamicLink.Suffix.SHORT)
                                             .addOnCompleteListener(new OnCompleteListener<ShortDynamicLink>() {
@@ -196,15 +199,26 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
 
     private void checkIfDocFilled(String id) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("slams").document(id)
+        db.collection("slam").document(id)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        boolean filledKey = Boolean.TRUE.equals(documentSnapshot.getBoolean("filled"));
+                        if (Boolean.TRUE.equals(documentSnapshot.getBoolean("filled"))) {
+                            SlamsModel slamsModel = documentSnapshot.toObject(SlamsModel.class);
+
+                            assert slamsModel != null;
+                            String goodName = slamsModel.getGoodName();
+                            String knownAs = slamsModel.getKnownAs();
+//                            String getBornOn
+//                            String getZodiacSign
+                            Log.d("TAG", "about you "  + slamsModel.goodName);
+                            slamsDataBase.addSlams(slamsModel);
+                        }
                     }
                 });
     }
+
 
     private void getDynamicLinksFromFirebase() {
         FirebaseDynamicLinks.getInstance()
@@ -396,6 +410,8 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
             intent.putExtra(Intent.EXTRA_TEXT, "Let's start filling our slams! " +
                     "It's digital form of slamBook \nGet it at --> \n" + inviteMessage);
             startActivity(Intent.createChooser(intent, "Share via"));
+        } else if (id == R.id.contact_us) {
+
         }
         return true;
     }

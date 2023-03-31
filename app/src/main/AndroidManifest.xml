@@ -10,26 +10,24 @@
         android:label="Slams"
         android:roundIcon="@mipmap/slams_logo_round"
         android:supportsRtl="true"
-        tools:targetApi="31"
-        android:theme="@style/Theme.SlamBook">
+        android:theme="@style/Theme.SlamBook"
+        tools:targetApi="31">
         <activity
-            android:name="com.sayatech.slambook.SlamDisplay"
+            android:name=".SlamDisplay"
             android:exported="false">
-
-        <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.sayatech.slambook.Slams"
-            android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.sayatech.slambook.SlamActivity"
+            android:name=".Slams"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SlamActivity"
             android:exported="true"
             android:theme="@style/Theme.SlamBook.splashScreen">
             <intent-filter>
@@ -37,14 +35,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="slams.com"
-                    android:scheme="https"/>
+                    android:scheme="https" />
             </intent-filter>
 
             <meta-data

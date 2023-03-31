@@ -26,7 +26,8 @@ public class Slams extends AppCompatActivity implements KnowMe.GetToKnowData,
     ViewPager viewPager;
     SlamsModel slamsModel;
     SlamsDataBase slamsDataBase;
-    boolean getToKnowDataCollected = false, talkFavesDataCollected = false;
+    boolean getToKnowDataCollected = false,
+            talkFavesDataCollected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,8 @@ public class Slams extends AppCompatActivity implements KnowMe.GetToKnowData,
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            public void onPageScrolled(int position, float positionOffset,
+                                       int positionOffsetPixels) {
             }
 
             @Override
@@ -159,13 +161,15 @@ public class Slams extends AppCompatActivity implements KnowMe.GetToKnowData,
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(Slams.this, "Successfully Submitted!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Slams.this, "Successfully Submitted!",
+                                        Toast.LENGTH_SHORT).show();
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(Slams.this, "Error while submitting-_-", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Slams.this, "Error while submitting-_-",
+                                        Toast.LENGTH_SHORT).show();
                             }
                         });
             } else {
