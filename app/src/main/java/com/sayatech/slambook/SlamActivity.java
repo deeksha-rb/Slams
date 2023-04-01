@@ -79,6 +79,7 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
             public boolean onPreDraw() {
                 if(appReady) {
                     String ID= sharedPreferences.getString("ID", "");
+                    Log.d("TAG", "onPreDraw: " + ID);
                     if (!ID.isEmpty()) {
                         checkIfDocFilled(ID);
                     }
@@ -158,6 +159,7 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
 
                                                     SharedPreferences.Editor editor = sharedPreferences.edit();
                                                     editor.putString("ID", documentReference.getId());
+                                                    editor.apply();
 
                                                     Intent shareIntent = new Intent();
                                                     String shareMessage = "Fill it out for me! \n" + shortLink;
@@ -199,21 +201,24 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
 
     private void checkIfDocFilled(String id) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("slam").document(id)
+        Log.d("TAG", "checkIfDocFilled:" + id);
+        db.collection("slams").document(id)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         if (Boolean.TRUE.equals(documentSnapshot.getBoolean("filled"))) {
                             SlamsModel slamsModel = documentSnapshot.toObject(SlamsModel.class);
-
-                            assert slamsModel != null;
-                            String goodName = slamsModel.getGoodName();
-                            String knownAs = slamsModel.getKnownAs();
-//                            String getBornOn
-//                            String getZodiacSign
-                            Log.d("TAG", "about you "  + slamsModel.goodName);
-                            slamsDataBase.addSlams(slamsModel);
+                            if (slamsModel != null)  {
+                                slamsDataBase.addSlams(slamsModel);
+                                arrSlams.add(slamsModel);
+                                adapter.notifyItemInserted(arrSlams.indexOf(slamsModel));
+                                db.collection("slams").document(id)
+                                        .delete();
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("ID", "");
+                                editor.apply();
+                            }
                         }
                     }
                 });
@@ -249,6 +254,7 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
                 appReady = true;
             }
         }, 500);
+
     }
 
     ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback

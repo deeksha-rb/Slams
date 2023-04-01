@@ -134,7 +134,7 @@ public class SlamsDataBase extends SQLiteOpenHelper {
 
         while (cursor.moveToNext()) {
 
-            SlamsModel slamsmodel =  new SlamsModel(-1, " ","","",
+            SlamsModel slamsmodel =  new SlamsModel(-1, false, " ","","",
                     " ", "","",",", "",
                     "","", ",","","","",
                     "","","", "","","",

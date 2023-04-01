@@ -46,7 +46,7 @@ public class Slams extends AppCompatActivity implements KnowMe.GetToKnowData,
                                         FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(viewPagerSlamAdapter);
         tabLayout.setupWithViewPager(viewPager);
-        slamsModel = new SlamsModel(-1,"","","","","",
+        slamsModel = new SlamsModel(-1, false,"","","","","",
                 "","","","","","",
                 "","","","","","",
                 "","","","","","","",
@@ -126,6 +126,7 @@ public class Slams extends AppCompatActivity implements KnowMe.GetToKnowData,
                 String ID = getIntent().getStringExtra("ID");
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
                 Map<String, Object> slam = new HashMap<>();
+                slam.put("id", -1);
                 slam.put("goodName", slamsModel.goodName);
                 slam.put("knownAs", slamsModel.knownAs );
                 slam.put("bornOn", slamsModel.bornOn );

@@ -75,6 +75,7 @@ public class TalkFaves extends Fragment {
         } else {
             SlamsModel slam = new SlamsModel(
                     -1,
+                    false,
                     "",
                     "",
                     "",

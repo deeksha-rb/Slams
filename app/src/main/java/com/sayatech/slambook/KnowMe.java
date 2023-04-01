@@ -102,6 +102,7 @@ public class KnowMe extends Fragment implements DatePickerDialog.OnDateSetListen
         } else {
             SlamsModel slam = new SlamsModel(
                     -1,
+                    false,
                     GoodName,
                     FondlyKnown,
                     BornOn,

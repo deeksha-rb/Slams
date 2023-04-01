@@ -6,9 +6,10 @@ public class SlamsModel {
             favBandOrSinger,favMovie,roleModel,liveQuote,hobby,crazyAbout,fascinatedBy,
             ambition,genie,rulePresident,badAt,
             describeLove,describeFriendship,aboutYou;
+    boolean filled;
     int id;
 
-    public SlamsModel(int id, String goodName,String knownAs,String bornOn, String zodiacSign,
+    public SlamsModel(int id, boolean filled, String goodName,String knownAs,String bornOn, String zodiacSign,
                       String mailID,String phoneNumber,String relationshipStatus,
                       String words,String favColor, String favFood,String favPlace,
                       String favSport,String favMovieStar,String favCartoonChar,
@@ -18,6 +19,7 @@ public class SlamsModel {
                       String describeLove,String describeFriendship,String aboutYou) {
 
         this.id = id;
+        this.filled = filled;
         this.goodName = goodName;
         this.knownAs = knownAs;
         this.bornOn = bornOn;
@@ -46,6 +48,10 @@ public class SlamsModel {
         this.describeLove = describeLove;
         this.describeFriendship = describeFriendship;
         this.aboutYou = aboutYou;
+
+    }
+
+    public SlamsModel() {
 
     }
 
