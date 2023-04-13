@@ -6,7 +6,7 @@
     android:id="@+id/myActionBar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/white">
+    android:background="?attr/colorSurface">
 
     <TextView
         android:id="@+id/icon_slams_2"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/signika_regular"
         android:text="Slams"
         android:textColor="@color/black"
         android:textSize="24sp"

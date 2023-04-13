@@ -44,7 +44,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:fontFamily="@font/convergence"
+                        android:fontFamily="@font/signika_regular"
                         android:text="Deeksha R B"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="24sp" />
@@ -53,7 +53,7 @@
                         android:id="@+id/slamNickName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/aleo"
+                        android:fontFamily="@font/signika_regular"
                         android:text="Deeksha R B"
                         android:textSize="18sp" />
 
@@ -73,7 +73,7 @@
                         android:id="@+id/slamBornOn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/aleo"
+                        android:fontFamily="@font/signika_regular"
                         android:text="Deeksha R B"
                         android:layout_marginBottom="5dp"
                         android:textSize="15sp" />

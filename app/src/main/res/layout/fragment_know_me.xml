@@ -131,8 +131,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
-            android:fontFamily="@font/amita"
-            android:textSize="20sp"/>
+            android:fontFamily="@font/signika_regular"
+            android:textSize="21sp"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

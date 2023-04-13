@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardCornerRadius="16dp"
@@ -30,11 +31,12 @@
             android:layout_height="wrap_content"
             android:focusable="false"
             android:gravity="center"
+            android:layout_marginStart="20dp"
             android:paddingBottom="10dp"
-            android:paddingHorizontal="10dp"
             android:text="How do you want it to be filled?"
+            android:fontFamily="@font/signika_regular"
             android:textAlignment="center"
-            android:textSize="19sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -48,7 +50,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Manually?"
+            android:textAlignment="center"
+            android:fontFamily="@font/signika_regular"
             android:layout_marginStart="10dp"
+            android:layout_marginBottom="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fill_message" />
@@ -60,22 +65,45 @@
             android:layout_below="@+id/logo_image"
             android:focusable="false"
             android:text="or"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:fontFamily="@font/signika_regular"
             android:textSize="19sp"
+            android:layout_marginBottom="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/digitally"
+            app:layout_constraintEnd_toStartOf="@+id/link_share"
             app:layout_constraintStart_toEndOf="@+id/manually"
             app:layout_constraintTop_toBottomOf="@+id/fill_message" />
 
         <Button
-            android:id="@+id/digitally"
+            android:id="@+id/link_share"
             style="@style/Widget.Material3.Button.TonalButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Digitally?"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/signika_regular"
+            android:text="Sharing a link?"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fill_message" />
+
+        <EditText
+            android:id="@+id/need_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/signika_regular"
+            android:text="Need a help?"
+            android:textColor="?attr/colorTertiary"
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:textSize="13sp"
+            android:padding="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

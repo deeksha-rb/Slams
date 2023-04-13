@@ -161,6 +161,7 @@
         android:layout_marginVertical="20sp"
         style="@style/Widget.Material3.Button.TonalButton"
         android:text="SAVE"
+        android:fontFamily="@font/signika_regular"
         android:textSize="20sp" />
 
 </LinearLayout>

@@ -59,7 +59,7 @@
                 android:textSize="27sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="100dp"
-                android:fontFamily="@font/amita"/>
+                android:fontFamily="@font/signika_regular"/>
 
         </FrameLayout>
 

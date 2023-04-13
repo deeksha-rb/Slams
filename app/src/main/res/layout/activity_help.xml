@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".help"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar3"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            app:title="Help?"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:src="@mipmap/slams_logo"
+        android:layout_gravity="center">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="In this digital version of the Slam Book, you can get your friend's slam by:"
+        android:textSize="20sp"
+        android:fontFamily="@font/signika_regular"
+        android:focusable="false">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="i) Manually : you can just pass your mobile to your friend and ask them to fill."
+        android:textSize="20sp"
+        android:fontFamily="@font/signika_regular"
+        android:focusable="false">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="ii) Sharing a link : ask your friend to fill a slam by clicking on the link you shared and also make sure they save it."
+        android:textSize="20sp"
+        android:fontFamily="@font/signika_regular"
+        android:focusable="false">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Isn't it an awesome way to save each and every details of your friends!!...                Now, let's begin with your best amigo :)"
+        android:textSize="20sp"
+        android:fontFamily="@font/signika_regular"
+        android:focusable="false">
+
+    </TextView>
+
+</LinearLayout>

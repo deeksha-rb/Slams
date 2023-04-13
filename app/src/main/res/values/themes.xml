@@ -31,14 +31,15 @@
     </style>
 
     <style name="Theme.SlamBook.SlamInputEditText" parent="ThemeOverlay.Material3.TextInputEditText">
-        <item name="fontFamily">@font/amita</item>
+        <item name="fontFamily">@font/signika_regular</item>
         <item name="android:layout_marginStart">5dp</item>
         <item name="android:layout_marginEnd">5dp</item>
         <item name="android:textCursorDrawable">@drawable/cursor_new</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">21sp</item>
         <item name="android:textColor">@color/md_theme_light_onSurface</item>
         <item name="android:lineSpacingExtra">-10dp</item>
     </style>
+
 
     <style name="Theme.SlamBook.SlamInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
         <item name="boxCornerRadiusBottomEnd">10dp</item>

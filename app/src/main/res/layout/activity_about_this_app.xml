@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutThisApp"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="About Slams"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:src="@mipmap/slams_logo"
+        android:layout_gravity="center">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Slam Book,the best way to save memories of your friends or their details. We'd love to introduce our digital SLAMS. We have a series of perfect number of questions to be asked for your friends, get it filled so that you can view their slam anytime if you ever forget anything about them!..
+                                                                  Here's the new version where you can receive their slam by sharing a link or by manually filling it. "
+        android:textSize="20sp"
+        android:fontFamily="@font/signika_regular"
+        android:focusable="false">
+
+    </TextView>
+</LinearLayout>

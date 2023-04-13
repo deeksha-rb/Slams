@@ -3,8 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-
     <item
         android:id="@+id/menu_list"
         app:showAsAction="ifRoom"
@@ -29,9 +27,17 @@
 
             <item
                 android:id="@+id/aboutApp"
-                android:title="About this app"
+                android:title="About"
                 app:showAsAction="never"
                 android:icon="@drawable/ic_baseline_info_24">
+
+            </item>
+
+            <item
+                android:id="@+id/help"
+                android:title="Help?"
+                app:showAsAction="never"
+                android:icon="@drawable/ic_baseline_help_24">
 
             </item>
         </menu>

@@ -13,6 +13,20 @@
         android:theme="@style/Theme.SlamBook"
         tools:targetApi="31">
         <activity
+            android:name=".help"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AboutThisApp"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SlamDisplay"
             android:exported="false">
             <meta-data

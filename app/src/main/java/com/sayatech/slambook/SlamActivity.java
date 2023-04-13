@@ -4,7 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,10 +28,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +40,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.firebase.dynamiclinks.DynamicLink;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
@@ -121,7 +125,8 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
                 slamChoiceDialog.show();
 
                 Button manually = slamChoiceDialog.findViewById(R.id.manually);
-                Button digitally = slamChoiceDialog.findViewById(R.id.digitally);
+                Button digitally = slamChoiceDialog.findViewById(R.id.link_share);
+                EditText help = slamChoiceDialog.findViewById(R.id.need_help);
 
                 manually.setOnClickListener(v1 -> {
                     startActivity(new Intent(getApplicationContext(), Slams.class));
@@ -183,8 +188,14 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
                                 }
                             });
                 });
+                help.setOnClickListener(v13 -> {
+                    startActivity(new Intent(SlamActivity.this, help.class));
+                    slamChoiceDialog.dismiss();
+
+                });
             }
         });
+
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
@@ -416,8 +427,10 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
             intent.putExtra(Intent.EXTRA_TEXT, "Let's start filling our slams! " +
                     "It's digital form of slamBook \nGet it at --> \n" + inviteMessage);
             startActivity(Intent.createChooser(intent, "Share via"));
-        } else if (id == R.id.contact_us) {
-
+        } else if (id == R.id.aboutApp) {
+            startActivity(new Intent(SlamActivity.this, AboutThisApp.class));
+        } else if (id == R.id.help) {
+            startActivity(new Intent(SlamActivity.this, help.class));
         }
         return true;
     }

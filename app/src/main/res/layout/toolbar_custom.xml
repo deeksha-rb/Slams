@@ -6,7 +6,7 @@
     android:id="@+id/myToolBar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="#FFFFFF">
+    android:background="?attr/colorSurface">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,9 +27,9 @@
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@id/back_arrow"
             android:text="Slams"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@color/black"
-            android:textSize="24sp"
+            android:fontFamily="@font/signika_regular"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="25sp"
             android:textStyle="normal"/>
 
     </RelativeLayout>
