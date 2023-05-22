@@ -11,13 +11,6 @@
         >
         <menu>
             <item
-                android:id="@+id/contact_us"
-                android:title="Contact us"
-                app:showAsAction="never"
-                android:icon="@drawable/ic_baseline_contact_mail_24">
-
-            </item>
-            <item
                 android:id="@+id/invite"
                 android:title="Invite"
                 app:showAsAction="never"
@@ -30,6 +23,14 @@
                 android:title="About"
                 app:showAsAction="never"
                 android:icon="@drawable/ic_baseline_info_24">
+
+            </item>
+
+            <item
+                android:id="@+id/contact_us"
+                android:title="Contact us"
+                app:showAsAction="never"
+                android:icon="@drawable/ic_baseline_contact_mail_24">
 
             </item>
 

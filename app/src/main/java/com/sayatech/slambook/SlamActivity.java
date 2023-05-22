@@ -431,6 +431,8 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
             startActivity(new Intent(SlamActivity.this, AboutThisApp.class));
         } else if (id == R.id.help) {
             startActivity(new Intent(SlamActivity.this, help.class));
+        } else if (id == R.id.contact_us) {
+            startActivity(new Intent(SlamActivity.this, contact_us.class));
         }
         return true;
     }
