@@ -34,8 +34,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="In this digital version of the Slam Book, you can get your friend's slam by:"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="3dp"
+        android:text="In this digital version of the Slam Book, you can easily gather your friend's slams."
         android:textSize="20sp"
         android:fontFamily="@font/signika_regular"
         android:focusable="false">
@@ -45,10 +47,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:text="i) Manually : you can just pass your mobile to your friend and ask them to fill."
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="You can simply pass your mobile to your friend and ask them to fill it out."
         android:textSize="20sp"
         android:fontFamily="@font/signika_regular"
         android:focusable="false">
@@ -58,20 +59,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:text="ii) Sharing a link : ask your friend to fill a slam by clicking on the link you shared and also make sure they save it."
-        android:textSize="20sp"
-        android:fontFamily="@font/signika_regular"
-        android:focusable="false">
-
-    </TextView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:text="Isn't it an awesome way to save each and every details of your friends!!...                Now, let's begin with your best amigo :)"
