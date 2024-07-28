@@ -176,7 +176,8 @@ public class Slams extends AppCompatActivity implements KnowMe.GetToKnowData,
             } else {
                 slamsDataBase.addSlams(slamsModel);
             }
-            onBackPressed();
+            getOnBackPressedDispatcher().onBackPressed();
+
         }else if (!getToKnowDataCollected){
             viewPager.setCurrentItem(0);
             Toast.makeText(getApplicationContext(), "Please fill all the details" ,

@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-
 public class BrowsingMore extends Fragment {
 
     View view;

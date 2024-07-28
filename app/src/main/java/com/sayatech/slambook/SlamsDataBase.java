@@ -180,5 +180,4 @@ public class SlamsDataBase extends SQLiteOpenHelper {
 
         return sqLiteDatabase.delete(TABLE_NAME, KEY_ROW_ID +"=?", new String[]{String.valueOf(id)});
     }
-
 }

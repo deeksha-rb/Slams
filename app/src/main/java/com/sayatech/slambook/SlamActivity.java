@@ -110,92 +110,13 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
         welcomeAnim = findViewById(R.id.welcome_anim);
         welcomeText = findViewById(R.id.welcome_text);
 
-        getDynamicLinksFromFirebase();
-
-        Dialog slamChoiceDialog = new Dialog(this);
 
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                slamChoiceDialog.setContentView(R.layout.slam_choice_dialog);
-                slamChoiceDialog.getWindow()
-                        .setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                slamChoiceDialog.getWindow().getAttributes().windowAnimations =
-                        com.google.android.material.R.style.Animation_AppCompat_Dialog;
-                slamChoiceDialog.show();
-
-                Button manually = slamChoiceDialog.findViewById(R.id.manually);
-                Button digitally = slamChoiceDialog.findViewById(R.id.link_share);
-                EditText help = slamChoiceDialog.findViewById(R.id.need_help);
-
-                manually.setOnClickListener(v1 -> {
-                    startActivity(new Intent(getApplicationContext(), Slams.class));
-                    slamChoiceDialog.dismiss();
-                });
-                digitally.setOnClickListener(v12 -> {
-                    FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-                    Map<String, Object> slam = new HashMap<>();
-                    slam.put("filled", false);
-
-                    db.collection("slams")
-                            .add(slam)
-                            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                @Override
-                                public void onSuccess(DocumentReference documentReference) {
-                                    Task<ShortDynamicLink> dynamicLink = FirebaseDynamicLinks
-                                            .getInstance()
-                                            .createDynamicLink()
-                                            .setLink(Uri.parse("https://www.slams.com/?id="
-                                                    + documentReference.getId()))
-                                            .setDomainUriPrefix("https://slams.page.link")
-                                            .setAndroidParameters(
-                                                    new DynamicLink
-                                                            .AndroidParameters
-                                                            .Builder("com.sayatech.slambook")
-                                                            .build()
-                                            ).buildShortDynamicLink(ShortDynamicLink.Suffix.SHORT)
-                                            .addOnCompleteListener(new OnCompleteListener<ShortDynamicLink>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<ShortDynamicLink> task) {
-                                                    Uri shortLink = task.getResult().getShortLink();
-                                                    Uri flowchartLink = task.getResult().getPreviewLink();
-                                                    Log.d("TAG", shortLink.toString());
-
-                                                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                                                    editor.putString("ID", documentReference.getId());
-                                                    editor.apply();
-
-                                                    Intent shareIntent = new Intent();
-                                                    String shareMessage = "Fill it out for me! \n" + shortLink;
-                                                    shareIntent.setAction(Intent.ACTION_SEND);
-                                                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
-                                                    shareIntent.setType("text/plain");
-                                                    startActivity(shareIntent);
-                                                    slamChoiceDialog.dismiss();
-                                                }
-                                            });
-                                }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Log.d("TAG", e.toString());
-                                    Toast.makeText(
-                                            SlamActivity.this,
-                                            "Error while generating a link",
-                                            Toast.LENGTH_LONG).show();
-                                }
-                            });
-                });
-                help.setOnClickListener(v13 -> {
-                    startActivity(new Intent(SlamActivity.this, help.class));
-                    slamChoiceDialog.dismiss();
-
-                });
+                startActivity(new Intent(getApplicationContext(), Slams.class));
             }
         });
-
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
@@ -230,29 +151,6 @@ public class SlamActivity extends AppCompatActivity  implements SlamRecyclerView
                                 editor.putString("ID", "");
                                 editor.apply();
                             }
-                        }
-                    }
-                });
-    }
-
-
-    private void getDynamicLinksFromFirebase() {
-        FirebaseDynamicLinks.getInstance()
-                .getDynamicLink(getIntent())
-                .addOnSuccessListener(new OnSuccessListener<PendingDynamicLinkData>() {
-                    @Override
-                    public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
-                        Uri deeplink = null;
-                        if (pendingDynamicLinkData != null) {
-                            deeplink = pendingDynamicLinkData.getLink();
-                        }
-                        if (deeplink != null) {
-                            String id = deeplink.toString().substring(26);
-                            Log.d("TAG", deeplink.toString());
-                            Log.d("TAG", "onSuccess: " + id);
-                            Intent receiveIntent = new Intent(getApplicationContext(), Slams.class);
-                            receiveIntent.putExtra("ID", id);
-                            startActivity(receiveIntent);
                         }
                     }
                 });

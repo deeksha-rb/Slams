@@ -31,7 +31,6 @@ public class contact_us extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW,
                         Uri.parse("http://instagram.com/slams_24")));
             }
-
         });
     }
 }
