@@ -34,12 +34,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="Slam Book,the best way to save memories of your friends or their details. We'd love to introduce our digital SLAMS. We have a series of perfect number of questions to be asked for your friends, get it filled so that you can view their slam anytime if you ever forget anything about them!..
-                                                                  Here's the new version where you can receive their slam by sharing a link or by manually filling it. "
-        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:focusable="false"
         android:fontFamily="@font/signika_regular"
-        android:focusable="false">
+        android:text="Slam Book, the best way to save memories of your friends or their details. We'd love to introduce our digital SLAMS. We have a series of perfect number of questions to be asked for your friends, get it filled so that you can view their slam anytime if you ever forget anything about them!.. "
+        android:textSize="21sp">
 
     </TextView>
 </LinearLayout>
